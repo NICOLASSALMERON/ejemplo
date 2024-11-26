@@ -3,23 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Mi Primera Página Web</title>
+    
+<style>
+ #demo {
+                background: rgb(219, 235, 255);
+                width: 70%;
+                height: 100px;
+               
+</style>
+
 </head>
 <body>
 
         <h2>Bienvenidos a Mi Página Web que usa JAVASCRIPT</h2>
+        <h2 id="demo"></h2>
+    
 <script>
-
 var x = 5;    
 var y = 20;
 var z = x + y;
-fetch(z);
-
 var nombre = prompt("Introduce tu nombre:");
 document.write (" HOLA " + nombre);
-fetch("\n" + nombre);
+    
+document.getElementById("demo").innerHTML = "hola alumnos";
 </script>
 </body>
 
 </html>
-
-  
