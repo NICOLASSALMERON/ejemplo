@@ -10,7 +10,7 @@
                 width: 70%;
                 height: 100px;
      }
- .clase1 {
+ #demo2 {
                 background: rgb(119, 135, 155);
                 width: 50%;
                 height: 150px;
@@ -20,14 +20,14 @@
 
 </head>
 <body>
-
+  <!--
         <h2>Bienvenidos a Mi Página Web que usa JAVASCRIPT</h2>
    
         <h2 id="demo1"></h2>
    
-        <h3 class="clase1">H3 CLASE1 </h3>
+        <h3 id="demo2">H3 DEMO2 </h3>
          <h4>H4</h4>
-     <!--
+   
     
   
     -->
@@ -42,8 +42,8 @@
   
 var nombre = prompt("Introduce tu nombre:");
     document.getElementById("demo1").innerHTML = (" HOLA " + nombre);
-    document.getElementsByClass("clase1").innerHTML = ("Hola");
-    document.getElementsByTagName("h4").innerHLTML = ("Hola4");
+    document.getElementById("demo2").innerHTML = ("Hola");
+    document.getElementById("h4").innerHLTML = ("Hola4");
     
 </script>
     
