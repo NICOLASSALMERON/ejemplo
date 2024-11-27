@@ -41,16 +41,16 @@
     
     
 <script>
-var x = 2;    
-var y = 13;
-var z = x + y;
-document.write ("El resultado de la suma de x+y = "z);
-  
-var nombre = prompt("Introduce tu nombre:");
-    document.write("\n HOLA " + nombre + " escrito sin CSS");
-    document.getElementById("demo1").innerHTML = (" HOLA " + nombre + " escrito en CSS demo1");
-    document.getElementById("demo2").innerHTML = ("Hello " + nombre + " escrito en CSS demo2");
-    document.getElementById("demo3").innerHTML = ("HI "+ nombre + " escrito en CSS demo3");
+      var numero1 = Number(prompt ("Escribe tu numero favorito:"));
+      var numero2 = prompt ("Escribe tu segundo numero favorito:");
+      numero2 =Number(numero2); //convierte numero a texto
+      
+      var resultado = numero1+numero2;
+      resultado = parseInt(resultado); //redondea a numero entero
+      document.write ("<h3 id='demo3'>El resultado de la suma es: </h3>" +resultado);
+      document.getElementById("demo3").innerHTML = ("El RESULTADO  es: "+ resultado);
+
+      
     
 </script>
     
