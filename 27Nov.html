@@ -61,12 +61,17 @@
       edad = Number(edad);
       if (edad == 18) 
               {
-              document.write("Tienes 18 años");
+              document.write("RESPUESTA 1");
               }
               else {
-              document.write("Puede que tengas menos de 18 años, o que tengas más");
-
-                
+                if (edad > 18) 
+                  {
+                    document.write(" RESPUESTA 2");
+                  }
+                else
+                  {
+                    document.write ("RESPUESTA 3");
+                  }  
               }
       
     </script>
