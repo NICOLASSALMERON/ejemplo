@@ -8,36 +8,37 @@
         <h1> Mi cuarta WEB</h1>
         <script>
         // switch
-        var day = prompt ("Escribe un numero del 1 al 7: ");
+        var dia = prompt ("Escribe un numero del 1 al 7: ");
+        var diaNombre = "ENERO";
        // dayName = Number(dayName);
-        switch (day) {
+        switch (dia) {
             case 0:
-                dayName = "Lunes"
+                diaNombre = "Lunes"
                 break
             case 1:
-                dayName = "Martes"
+                diaNombre = "Martes"
                 break
             case 2:
-                dayName = "Miércoles"
+                diaNombre = "Miércoles"
                 break
             case 3:
-                dayName = "Jueves"
+                diaNombre = "Jueves"
                 break
             case 4:
-                dayName = "Viernes"
+                diaNombre = "Viernes"
                 break
             case 5:
-                dayName = "Sábado"
+                diaNombre = "Sábado"
                 break
             case 6:
-                dayName = "Domingo"
+                diaNombre = "Domingo"
                 break
             default:
-            dayName = "Número de día incorrecto"
+            diaNombre = "Número de día incorrecto"
         }
 
         document.write ("<br>");
-        document.write ("<h3 id='demo1'>El dia de la semana correspondiente es: " +dayName);
+        document.write ("<h3 id='demo1'>El dia de la semana correspondiente es: " +diaNombre);
         document.write ("</h3>");
         document.write ("<br><br><br>");
     </script>
