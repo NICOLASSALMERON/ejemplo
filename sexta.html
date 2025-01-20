@@ -9,10 +9,16 @@
         <script>
             var x = prompt ("Escribe un numero del 1 al 10"); 
             var i = 0;
-              for (i = 0; i < x; i++) 
+            if x >10 { 
+                        document.write ("ERROR, has introducido un numero mayor de 10");
+                      }
+            else 
                     {
-                    document.write ("<br>" i);
-                    document.write (i);
+                          for (i = 0; i < x; i++) 
+                                {
+                                document.write ("<br>" i);
+                                document.write (i);
+                                }
                     }
         </script>
 </body>
