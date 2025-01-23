@@ -29,14 +29,16 @@
             numero = parseInt(prompt("Número inválido. Introduce un número entre 1 y 100:"));
             }
                      
-            var suma = 0; //Iniciamos la variable suma a 0
+            //Iniciamos las variables
+            var suma = 0; 
+            var i = 1;
 
             // Realizamos la suma desde 1 hasta el número introducido
-            for (let i = 1; i <= numero; i++) {
-            suma += i;
+            for (i = 1; i <= numero; i++) {
+            suma = suma + i;
             }
 
-            // Mostramos el resultado
+            // Mostramos el resultado en la página web
             document.write ("<br>La suma de los números del 1 al " + numero + " es: " + suma);
           </script>
 </body>
