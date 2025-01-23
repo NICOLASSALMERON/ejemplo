@@ -19,6 +19,25 @@
                     }
             document.write ("<br><br>");
             document.write ("La suma total de todos los numeros introducidos entre 1 y "+numero2+ " es igual a " +sumaTotal);
+
+            // Pedimos al usuario que introduzca un número
+            let numero = parseInt(prompt("Introduce un número entre 1 y 100:"));
+
+            // Validamos que el número esté dentro del rango
+            while (numero < 1 || numero > 100) {
+            numero = parseInt(prompt("Número inválido. Introduce un número entre 1 y 100:"));
+            }
+              
+            // Inicializamos la suma en 0
+            let suma = 0;
+
+            // Realizamos la suma desde 1 hasta el número introducido
+            for (let i = 1; i <= numero; i++) {
+            suma += i;
+            }
+
+            // Mostramos el resultado
+            document.write ("<br>La suma de los números del 1 al " + numero + " es: " + suma);
           </script>
 </body>
 </html>
