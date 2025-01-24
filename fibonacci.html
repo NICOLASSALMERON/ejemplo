@@ -7,22 +7,23 @@
    
         <h1> Mi  WEB acerca de los numeros de fibonacci</h1>
           <script>
+          var numero;
+          // Pedimos al usuario que introduzca un número                     
+          numero =  prompt("Introduce un número entre 1 y 100 para calcular la serie de Fibonacci");  
+          numero = Number(numero); // Convertimos el texto a numero    
+          while (numero < 1 || numero > 100) {
+            numero = prompt("Número inválido. Introduce un número entre 1 y 100:");
+            numero = Number (numero); // Convertimos el texto a numero
+            }
 
+          // a y b se inicializan con los dos primeros números de la secuencia (0 y 1).
+          // temp se utiliza como una variable temporal para almacenar el siguiente número de la secuencia.
           var a = 0;
           var b = 1;
           var temp;
 
           document.write (a); // Imprimimos el primer número de la sucesión
           document.write (b); // Imprimimos el segundo número
-          
-          // Pedimos al usuario que introduzca un número                     
-          var numero =  prompt("Introduce un número entre 1 y 100 para calcular la serie de Fibonacci");  
-          numero = Number(numero); // Convertimos el texto a numero    
-          while (numero < 1 || numero > 100) {
-            numero = prompt("Número inválido. Introduce un número entre 1 y 100:");
-            numero = Number (numero); // Convertimos el texto a numero
-            }
-              
           for (let i = 2; i < numero; i++) {
               temp = a + b;
               document.write(temp);
