@@ -27,10 +27,11 @@
 
           //Se repite desde 2 hasta la cantidad que se haya introducido (ya que los dos primeros números ya se han impreso).
           for (let i = 2; i < numero; i++) {
-              temp = a + b;
-              document.write("<br>"+temp);
+              temp = a + b; // En cada iteración, se calcula el siguiente número de la secuencia sumando a y b, y se almacena en temp.
+              document.write("<br>"+temp); //Se imprime el valor de temp.
               a = b;
-              b = temp;
+              b = temp; 
+              //Se actualizan los valores de a y b para la siguiente iteración: a toma el valor de b, y b toma el valor de temp.
               }
           </script>
 </body>
