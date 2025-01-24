@@ -14,8 +14,16 @@
 
           document.write (a); // Imprimimos el primer número de la sucesión
           document.write (b); // Imprimimos el segundo número
-
-          for (let i = 2; i < cantidad; i++) {
+          
+          // Pedimos al usuario que introduzca un número                     
+          var numero =  prompt("Introduce un número entre 1 y 100 para calcular la serie de Fibonacci");  
+          numero = Number(numero); // Convertimos el texto a numero    
+          while (numero < 1 || numero > 100) {
+            numero = prompt("Número inválido. Introduce un número entre 1 y 100:");
+            numero = Number (numero); // Convertimos el texto a numero
+            }
+              
+          for (let i = 2; i < numero; i++) {
               temp = a + b;
               document.write(temp);
               a = b;
