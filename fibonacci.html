@@ -18,15 +18,16 @@
 
           // a y b se inicializan con los dos primeros números de la secuencia (0 y 1).
           // temp se utiliza como una variable temporal para almacenar el siguiente número de la secuencia.
-          var a = 0;
-          var b = 1;
+          var a = 1;
+          var b = 2;
           var temp;
+          var i= 2;
 
           document.write (a); // Imprimimos el primer número de la sucesión
           document.write (b); // Imprimimos el segundo número
 
           //Se repite desde 2 hasta la cantidad que se haya introducido (ya que los dos primeros números ya se han impreso).
-          for (let i = 2; i < numero; i++) {
+          for (i = 2; i < numero; i++) {
               temp = a + b; // En cada iteración, se calcula el siguiente número de la secuencia sumando a y b, y se almacena en temp.
               document.write("<br>"+temp); //Se imprime el valor de temp.
               a = b;
