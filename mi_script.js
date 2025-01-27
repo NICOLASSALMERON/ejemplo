@@ -1,4 +1,8 @@
-            setTimeout(() => { }, 100);
+	   setTimeout(() => {
+ 	 	// Código que deseas ejecutar después de 100 milisegundos
+ 	 	console.log("Esto se ejecutará después de 100ms");
+		}, 100);
+
             var menu =  prompt("Introduce una OPCIÓN");  // Pedimos al usuario que introduzca una opción
 
             // Validamos que el número esté dentro del rango
