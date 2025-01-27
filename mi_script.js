@@ -1,5 +1,5 @@
             var menu =  prompt("Introduce una OPCIÓN");  // Pedimos al usuario que introduzca una opción
-            menu = Number(menu); // Convertimos el texto a numero
+            menu = Number(menu); // Convertimos el texto a numero.
 
             // Validamos que el número esté dentro del rango
             while (menu < 0 || menu > 2) {
