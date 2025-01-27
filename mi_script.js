@@ -1,10 +1,10 @@
-            var numero =  prompt("Introduce una OPCIÓN");  // Pedimos al usuario que introduzca una opción
-            numero = Number(numero); // Convertimos el texto a numero
+            var menu =  prompt("Introduce una OPCIÓN");  // Pedimos al usuario que introduzca una opción
+            menu = Number(menu); // Convertimos el texto a numero
 
             // Validamos que el número esté dentro del rango
-            while (numero < 0 || numero > 2) {
+            while (menu < 0 || menu > 2) {
 	    var numero =  prompt("Introduce una OPCIÓN válida: ");
-            numero = Number (numero); // Convertimos el texto a numero
+            menu Number (menu); // Convertimos el texto a numero
             }
                      
             //Iniciamos las variables
