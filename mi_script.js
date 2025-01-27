@@ -8,7 +8,7 @@
             // Validamos que el número esté dentro del rango
             while (menu < 0 || menu > 2) {
 	    var menu =  prompt("Introduce una OPCIÓN válida: ");
-            menu Number (menu); // Convertimos el texto a numero
+            //menu Number (menu); // Convertimos el texto a numero
             }
 
  	    document.write ("<br>");
