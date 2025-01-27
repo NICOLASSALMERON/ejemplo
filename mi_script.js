@@ -1,4 +1,3 @@
-
             var numero =  prompt("Introduce una OPCIÓN");  // Pedimos al usuario que introduzca una opción
             numero = Number(numero); // Convertimos el texto a numero
 
