@@ -1,4 +1,4 @@
-<script>
+
             var numero =  prompt("Introduce una OPCIÓN");  // Pedimos al usuario que introduzca una opción
             numero = Number(numero); // Convertimos el texto a numero
 
@@ -20,4 +20,3 @@
 
             // Mostramos el resultado en la página web
             document.write ("<br><br>La suma TOTAL de todos los numeros introducidos entre 1 y " + numero + " es: " + suma);
-</script>
