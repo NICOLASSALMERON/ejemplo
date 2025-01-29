@@ -1,26 +1,39 @@
-¡Claro! Aquí tienes un código en PseInt para calcular la serie de Fibonacci hasta un número determinado:
+<html>
+    <head>
+        <title>Mi Página sobre la serie de fibonacci</title> 
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+    <body>    
+   
+        <h1> Mi  WEB acerca de los numeros de fibonacci</h1>
+          <script>
+          var numero;
+          // Pedimos al usuario que introduzca un número                     
+          numero =  prompt("Introduce un número entre 1 y 100 para calcular la serie de Fibonacci");  
+          numero = Number(numero); // Convertimos el texto a numero    
+          while (numero < 1 || numero > 100) {
+            numero = prompt("Número inválido. Introduce un número entre 1 y 100:");
+            numero = Number (numero); // Convertimos el texto a numero
+            }
 
-Fragmento de código
+          // a y b se inicializan con los dos primeros números de la secuencia (0 y 1).
+          // temp se utiliza como una variable temporal para almacenar el siguiente número de la secuencia.
+          var a = 1;
+          var b = 2;
+          var temp;
+          var i= 2;
 
-Algoritmo Fibonacci
-    Definir num, a, b, c Como Entero
-    
-    Escribir "Ingrese la cantidad de términos de la serie de Fibonacci: "
-    Leer num
+          document.write (a); // Imprimimos el primer número de la sucesión
+          document.write ("<br>"+b); // Imprimimos el segundo número
 
-    // Inicializamos los primeros dos términos
-    a <- 0
-    b <- 1
-
-    Escribir "La serie de Fibonacci es:"
-    Escribir a
-    Escribir b
-
-    // Calculamos los demás términos
-    Para i Desde 3 Hasta num Hacer
-        c <- a + b
-        Escribir c
-        a <- b
-        b <- c
-    FinPara
-FinAlgoritmo
+          //Se repite desde 2 hasta la cantidad que se haya introducido (ya que los dos primeros números ya se han impreso).
+          for (i = 2; i < numero; i++) {
+              temp = a + b; // En cada iteración, se calcula el siguiente número de la secuencia sumando a y b, y se almacena en temp.
+              document.write("<br>"+temp); //Se imprime el valor de temp.
+              a = b;
+              b = temp; 
+              //Se actualizan los valores de a y b para la siguiente iteración: a toma el valor de b, y b toma el valor de temp.
+              }
+          </script>
+</body>
+</html>
