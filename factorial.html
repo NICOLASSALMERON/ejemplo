@@ -10,7 +10,15 @@
         <script>
           // Inicialización de variables, se pide al usuario que introduzca un numero para despues calcular el factorial.
           // Se crea una variable llamada numero y se le asigna el valor que haya introducido el usuario. Este valor representa el número cuyo factorial queremos calcular. 
-          // Se crea otra variable llamada factorial y se inicializa en 1. Esta variable almacenará el resultado final del cálculo del factorial.
+        var factorial = 1; 
+            for (i=1; i<=numero; i++)
+                 {
+                     factorial = factorial * i;
+                 }
+        document.write (factorial);
+
+            
+            // Se crea otra variable llamada factorial y se inicializa en 1. Esta variable almacenará el resultado final del cálculo del factorial.
           // Se crea un bucle for, el bucle for se utiliza para iterar un número determinado de veces. En este caso, el bucle se ejecutará desde i = 1 hasta que i sea menor o igual a numero.
           // En cada iteración del bucle, se multiplica el valor actual de factorial por el valor actual de i y asigna el resultado a la variable factorial, es decir, en cada iteración:
           // se está multiplicando factorial por los números del 1 al numero por el usuario
