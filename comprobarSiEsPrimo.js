@@ -8,7 +8,7 @@
                     if (numero % i === 0) {
                             return false;
                             }
-             }
-            // Si no se encontró ningún divisor, el número es primo
-            return true;
+                 }
+                 // Si no se encontró ningún divisor, el número es primo
+                 return true;
             }
