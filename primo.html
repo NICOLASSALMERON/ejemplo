@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Mi Página para calcular si un numero es primo </title> 
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+    <body>    
+   
+        <h1> Mi Página para calcular si un numero es primo</h1>
+        <script src="pedirNumeroEnRango.js"></script>
+        <script>
+            var numero = pedirNumeroEnRango(1, 50);
+function esPrimo(numero) {
+  // Los números negativos, 0 y 1 no son primos
+  if (numero <= 1) {
+    return false;
+  }
+
+  // Comprobamos si el número es divisible por algún número entre 2 y su raíz cuadrada
+  for (let i = 2; i <= Math.sqrt(numero); i++) {
+    if (numero % i === 0) {
+      return false;
+    }
+  }
+
+  // Si no se encontró ningún divisor, el número es primo
+  return true;
+}
+
+// Ejemplo de uso:
+let numeroAComprobar = 17;
+if (esPrimo(numeroAComprobar)) {
+  console.log(numeroAComprobar + " es un número primo.");
+} else {
+  console.log(numeroAComprobar + " no es un número primo.");
+}
+          </script>
+</body>
+</html>
