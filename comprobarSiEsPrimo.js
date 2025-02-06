@@ -3,7 +3,7 @@
                 var i;
                 
                 // Comprobamos si el número es divisible por algún número entre 2 y su raíz cuadrada.
-                for (i = numero-1; i <= 2; i = i-1) {
+                for (i = numero-1; i >= 2; i = i-1) {
                     if (numero % i === 0) {
                             esPrimo = false;
                             return esPrimo;
