@@ -4,7 +4,7 @@
                         return false;
                       }
                 // Comprobamos si el número es divisible por algún número entre 2 y su raíz cuadrada
-                for (var i = 2; i <= Math.sqrt(numero); i++) {
+                for (var i = numero-1; i <= 2; i--) {
                     if (numero % i === 0) {
                             return false;
                             }
