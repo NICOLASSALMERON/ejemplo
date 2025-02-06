@@ -5,7 +5,7 @@
     </head>
     <body>    
    
-        <h1> Mi Página para calcular todos los numeros primos inferiores a una cifra </h1>
+       
         <script src="pedirNumero.js"></script>
         <script src="comprobarSiEsPrimo.js"></script>
         <script> 
@@ -13,6 +13,7 @@
             var numero;
             var i;
             numero = pedirNumeroEnRango(2, 1024);
+            document.write (" <h1> Mi Página para calcular todos los numeros primos inferiores a " +numero+ "</h1>");
             document.write("<h4>Los numeros primos entre 2 y " +numero+ "  son: </h4>");
             for (i = 2; i <= numero ; i= i + 1)
                 {
