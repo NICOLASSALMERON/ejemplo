@@ -7,4 +7,3 @@
                         numero = prompt("Número inválido. Introduce un número entre 1 y 100:");
                         numero = Number (numero); // Convertimos el texto a numero
                         }
-            document.write ("<br>");
