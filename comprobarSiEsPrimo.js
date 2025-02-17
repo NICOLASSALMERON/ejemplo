@@ -9,10 +9,10 @@ function comprobarEsPrimo (numero)
         {
         esPrimo = false;  
         }
-
-  esPrimo = true;
+    // si no hemos encontrado ningún divisor entonces el numero es primo
+    esPrimo = true;
     }
-  // si no hemos encontrado ningún divisor entonces el numero es primo
+  
   
   return esPrimo;
 }
