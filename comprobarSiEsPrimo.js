@@ -7,12 +7,11 @@ function comprobarEsPrimo (numero)
     {
       if ( numero % i === 0 )
         {
-        esPrimo = false;  
+        esPrimo = false;
+        return esPrimo;
         }
-    // si no hemos encontrado ningún divisor entonces el numero es primo
-    esPrimo = true;
     }
-  
-  
-  return esPrimo;
+// si no hemos encontrado ningún divisor entonces el numero es primo
+esPrimo = true;  
+return esPrimo;
 }
