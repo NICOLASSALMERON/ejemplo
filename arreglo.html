@@ -14,10 +14,10 @@
 
         // Solicitar al usuario cuantos  números favoritos tiene
 
-        favoritos = pedirNumeroEnRango(3, 5);
+        favoritos = pedirNumeroEnRangoMejorado("Dime cuantos numeros favoritos tienes",3, 5);
         for ( i = 1; i <= favoritos; i++) {
             // Pedir todos los numeros favoritos al usuario
-            var numero = pedirNumeroEnRango(0, 55);
+            var numero = pedirNumeroEnRangoMejorado(Introduce tus numeros favoritos,0, 55);
     
             // Convertir el número a tipo Number y agregarlo al array
             numeros.push(numero);
