@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Mi Página para aprender a usar arrays </title> 
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+    <body>         
+        <script src="pedirNumero.js"></script>
+        <script> 
+        // Crear un array vacío para almacenar los números
+        var numeros = [];
+        var i;
+
+        // Solicitar al usuario 5 números
+        for ( i = 0; i < 5; i++) {
+            // Pedir un número al usuario
+            var numero = pedirNumeroEnRango(2, 1024);
+    
+            // Convertir el número a tipo Number y agregarlo al array
+            numeros.push(Number(numero));
+            }
+
+        // Mostrar el array con los números ingresados
+        document.write ("Los números ingresados son:", numeros);
+
+          </script>
+</body>
+</html>
