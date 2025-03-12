@@ -12,8 +12,9 @@
         var i;
         var favoritos;
 
-        // Solicitar al usuario 5 números
-        for ( i = 0; i < 5; i++) {
+        // Solicitar al usuario cuantos  números favoritos tiene
+        favoritos = pedirNumeroEnRango(3, 10);
+        for ( i = 0; i <= favoritos; i++) {
             // Pedir un número al usuario
             var numero = pedirNumeroEnRango(2, 1024);
     
