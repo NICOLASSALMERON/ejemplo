@@ -25,6 +25,21 @@ function pedirNumeroEnRangoMejorado(texto, min, max) {
     } while (esUnNumero || numero < min || numero > max);
     return numero;
 }
+
+function pedirNumeroEnRangoMejorado(texto, min, max) {
+    var numero;
+    var esUnNumero;
+    do {
+        numero = prompt(texto + min + " y " + max + ":");
+        esUnNumero = isNaN(numero);
+        if (esUnNumero) {
+            alert("Entrada no válida. Por favor, ingrese un número.");
+        } else {
+            numero = Number(numero);
+        }
+    } while (esUnNumero || numero < min || numero > max);
+    return numero;
+}
    //Mejoras realizadas
         //- Verificación de isNaN():
             //Antes de intentar convertir la entrada a un número con Number(), verificamos si isNaN(numero) es verdadero.
