@@ -6,10 +6,10 @@
   <script src="pedirNumero.js"> </script>
    <!-- La primera etiqueta carga un archivo JavaScript externo llamado "pedirNumero.js"-->
     <script>
-    var numeros = [];
-    var i;
-    var favoritos;
-    var numero;
+    var numeros = []; // Declaramos un array vacío que se utilizará para almacenar los números favoritos del usuario.
+    var i; //Declaramos una variable de contador para el bucle
+    var favoritos; //Almacenará la cantidad de números favoritos que el usuario quiere introducir.
+    var numero; //Almacenará cada número favorito individual introducido por el usuario.
 
     favoritos = pedirNumeroEnRangoMejorado ("Dime: ¿Cuantos numeros favoritos tienes? entre ",2,5);
     for (i=1; i <= favoritos; i = i+1 )
