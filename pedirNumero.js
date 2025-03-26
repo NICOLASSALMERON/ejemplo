@@ -19,7 +19,7 @@ function pedirNumeroEnRangoMejorado(texto, min, max) {
         } else {
             numero = Number(numero);
         }
-    } while (isNaN(numero) || numero < min || numero > max);
+    } while (esUnNumero || numero < min || numero > max);
     return numero;
 }
    //Mejoras realizadas
