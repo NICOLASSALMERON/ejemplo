@@ -10,9 +10,11 @@ function pedirNumeroEnRango(min, max)
 
 function pedirNumeroEnRangoMejorado(texto, min, max) {
     var numero;
+    var esUnNumero;
     do {
         numero = prompt(texto + min + " y " + max + ":");
-        if (isNaN(numero)) {
+        esUnNumero = isNan(numero);
+        if (esUnNumero) {
             alert("Entrada no válida. Por favor, ingrese un número.");
         } else {
             numero = Number(numero);
