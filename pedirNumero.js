@@ -14,11 +14,14 @@ function pedirNumeroEnRangoMejorado(texto, min, max) {
     do {
         numero = prompt(texto + min + " y " + max + ":");
         esUnNumero = isNan(numero);
-        if (esUnNumero) {
+        if (esUnNumero) 
+            {
             alert("Entrada no válida. Por favor, ingrese un número.");
-        } else {
+            } 
+        else 
+            {
             numero = Number(numero);
-        }
+            }
     } while (esUnNumero || numero < min || numero > max);
     return numero;
 }
