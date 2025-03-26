@@ -15,13 +15,13 @@
      
     favoritos = pedirNumeroEnRangoMejorado ("Dime: ¿Cuantos numeros favoritos tienes? entre ",2,5);
     //Esta línea llama a la función pedirNumeroEnRangoMejorado (definida en "pedirNumero.js") para solicitar al usuario que ingrese la cantidad de números favoritos.
-    //Se espera que el usuario ingrese un número entre 2 y 5 (inclusive).
+    //Se espera que el usuario ingrese un número entre 2 y 5.
       
     for (i=1; i <= favoritos; i = i+1 ) //El bucle for se ejecuta las veces que hayamos almacenado en favoritos
       {
-          numero = pedirNumeroEnRangoMejorado ("Escribe ahora tus numeros favoritos entre; ", 10,100);
+          numero = pedirNumeroEnRangoMejorado ("Escribe ahora tus numeros favoritos entre; ", 0,999);
           numeros.push (numero);
-          //En cada iteración del bucle, se llama a pedirNumeroEnRangoMejorado para solicitar al usuario que ingrese un número favorito entre 10 y 100 (inclusive).
+          //En cada iteración del bucle, se llama a pedirNumeroEnRangoMejorado para solicitar al usuario que ingrese un número favorito entre 0 y 999 .
           //El número ingresado se almacena en la variable numero.
           //Posteriormente, el número se agrega al final del array numeros.
 
