@@ -22,7 +22,7 @@ function pedirNumeroEnRangoMejorado(texto, min, max) {
     } while (esUnNumero || numero < min || numero > max);
     return numero;
 }
-   //Mejoras realizadas
+   //Mejoras realizadas:
         //- Verificación de isNaN():
             //Antes de intentar convertir la entrada a un número con Number(), verificamos si isNaN(numero) es verdadero.
             //Si lo es, significa que la entrada no es un número válido.
