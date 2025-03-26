@@ -1,0 +1,23 @@
+<body>
+    <div id="contenedor">
+        <button id="botonInofensivo">Botón inofensivo</button>
+        <button id="botonAlerta">Púlsame!!!!</button>
+        <div id="mensaje"></div>
+    </div>
+
+    <script>
+        // Esperar a que el DOM esté listo
+        document.addEventListener('DOMContentLoaded', function() {
+            alert('BIENVENIDO');
+            
+            document.getElementById('botonAlerta').addEventListener('click', mostrarAlerta);
+            document.getElementById('botonInofensivo').addEventListener('click', function() {
+                document.getElementById('mensaje').textContent = 'Botón inofensivo clickeado';
+            });
+        });
+        
+        function mostrarAlerta() {
+            alert('¡Has pulsado el botón!!!!');
+        }
+    </script>
+</body>
