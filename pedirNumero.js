@@ -13,24 +13,6 @@ function pedirNumeroEnRangoMejorado(texto, min, max) {
     var esUnNumero;
     do {
         numero = prompt(texto + min + " y " + max + ":");
-        esUnNumero = isNan(numero);
-        if (esUnNumero==true) 
-            {
-            alert("Entrada no válida. Por favor, ingrese un número:");
-            } 
-        else 
-            {
-            numero = Number(numero);
-            }
-    } while (esUnNumero || numero < min || numero > max);
-    return numero;
-}
-
-function pedirNumeroEnRangoMejorado(texto, min, max) {
-    var numero;
-    var esUnNumero;
-    do {
-        numero = prompt(texto + min + " y " + max + ":");
         esUnNumero = isNaN(numero);
         if (esUnNumero) {
             alert("Entrada no válida. Por favor, ingrese un número.");
