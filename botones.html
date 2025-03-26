@@ -3,10 +3,27 @@
 <head>
     <title>Botón Púlsame</title>
     <link rel="stylesheet" href="estilo.css">
+
 </head>
 <body>
-    <button>Botón inofensivo</button>
-    alert('ALERTA!')
-    <button onclick="alert('¡Has pulsado el botón!!!!')">Púlsame!!!!</button>
+    <button id="botonInofensivo">Botón inofensivo</button>
+    <button onclick="mostrarAlerta()">Púlsame!!!!</button>
+
+    <script>
+        // Función para mostrar alerta
+        function mostrarAlerta() {
+            alert('¡Has pulsado el botón!!!!');
+        }
+        
+        // Mensaje de alerta al cargar la página
+        window.onload = function() {
+            alert('ALERTA! La página se ha cargado');
+        };
+        
+        // Event listener para el botón "inofensivo"
+        document.getElementById('botonInofensivo').addEventListener('click', function() {
+            console.log('Botón inofensivo clickeado');
+        });
+    </script>
 </body>
 </html>
