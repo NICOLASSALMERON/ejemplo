@@ -30,5 +30,12 @@ Hasta aquí el CSS usado en la web dos, de aqui en adelante a la web tres
                 height: 40px;
              }
 
+        /* Estilo usado en la web de botones.html */
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
    
 </style>
