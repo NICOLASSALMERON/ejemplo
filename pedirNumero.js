@@ -14,7 +14,7 @@ function pedirNumeroEnRangoMejorado(texto, min, max) {
     do {
         numero = prompt(texto + min + " y " + max + ":");
         esUnNumero = isNan(numero);
-        if (esUnNumero) 
+        if (esUnNumero==true) 
             {
             alert("Entrada no válida. Por favor, ingrese un número.");
             } 
