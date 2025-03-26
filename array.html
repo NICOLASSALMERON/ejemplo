@@ -3,8 +3,10 @@
     <title> Web sobre arrays</title>
   </head>
   <body>
-  <script src="pedirNumero.js"> </script>
-   <!-- La primera etiqueta carga un archivo JavaScript externo llamado "pedirNumero.js"-->
+    <script src="pedirNumero.js"
+    // La primera etiqueta script carga un archivo JavaScript externo llamado "pedirNumero.js"
+    </script>
+  
     <script>
     var numeros = []; // Declaramos un array vacío que se utilizará para almacenar los números favoritos del usuario.
     var i; //Declaramos una variable de contador para el bucle
@@ -14,12 +16,18 @@
     favoritos = pedirNumeroEnRangoMejorado ("Dime: ¿Cuantos numeros favoritos tienes? entre ",2,5);
     //Esta línea llama a la función pedirNumeroEnRangoMejorado (definida en "pedirNumero.js") para solicitar al usuario que ingrese la cantidad de números favoritos.
     //Se espera que el usuario ingrese un número entre 2 y 5 (inclusive).
-    for (i=1; i <= favoritos; i = i+1 )
+      
+    for (i=1; i <= favoritos; i = i+1 ) //El bucle for se ejecuta las veces que hayamos almacenado en favoritos
       {
           numero = pedirNumeroEnRangoMejorado ("Escribe ahora tus numeros favoritos entre; ", 10,100);
           numeros.push (numero);
+          //En cada iteración del bucle, se llama a pedirNumeroEnRangoMejorado para solicitar al usuario que ingrese un número favorito entre 10 y 100 (inclusive).
+          //El número ingresado se almacena en la variable numero.
+          //Posteriormente, el número se agrega al final del array numeros.
+
       }
-     document.write ("Los numeros favoritos introducidos han sido:<br> ", numeros);      
+     document.write ("Los numeros favoritos introducidos han sido:<br> ", numeros); 
+     // Esta línea muestra en la página web un mensaje con los números favoritos que el usuario ha introducido, separados por comas. El <br> inserta un salto de línea.
     </script> 
   </body>
 </html>
