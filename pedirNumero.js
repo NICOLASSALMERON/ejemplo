@@ -31,4 +31,4 @@ function pedirNumeroEnRangoMejorado(texto, min, max) {
         //-Condición del while:
             //La condición del while ahora incluye isNaN(numero). Esto asegura que el bucle se repita si el usuario ingresa una entrada no numérica.
   
-}
+
