@@ -13,9 +13,9 @@
     </div>
 
     <script>
-        // Esperar a que el DOM esté listo
-        document.addEventListener('DOMContentLoaded', function() {alert('BIENVENIDO');
-            
+
+         // Esperar a que el DOM esté listo
+        document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('botonPulsame').addEventListener('click', mostrarAlerta);
             document.getElementById('botonInofensivo').addEventListener('click', function() {
                 document.getElementById('mensaje').textContent = 'Botón inofensivo clickeado';
@@ -25,6 +25,7 @@
         function mostrarAlerta() {
             alert('¡Has pulsado el botón!!!!');
         }
+
     </script>
 </body>
 </html>
