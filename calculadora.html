@@ -8,8 +8,8 @@
 <body>
     <div class="contenedor">
         <h2>Calculadora Simple</h2>
-        <input type="text" id="numero1" placeholder="Primer número">
-        <input type="text" id="numero2" placeholder="Segundo número" maxlength="12" width="12">
+        <input type="text" id="entrada1" placeholder="Primer número">
+        <input type="text" id="entrada2" placeholder="Segundo número" maxlength="12" width="12">
        
         <button id="botonSumar">Sumar</button>
         <button id="botonMultiplicar">Multiplicar</button>
@@ -21,8 +21,8 @@
         var numero1, numero2, botonSumar, botonMultiplicar, resultado, num1, num2;
         
         document.addEventListener('DOMContentLoaded', function() {
-            numero1 = document.getElementById('numero1');
-            numero2 = document.getElementById('numero2');
+            numero1 = document.getElementById('entrada1');
+            numero2 = document.getElementById('entrada2');
             botonSumar = document.getElementById('botonSumar');
             botonMultiplicar = document.getElementById('botonMultiplicar');
             resultado = document.getElementById('resultado');
