@@ -8,7 +8,7 @@
 <body>
     <div id="contenedor">
         <button id="botonInofensivo">Botón inofensivo</button>
-        <button id="botonAlerta">Púlsame!!!!</button>
+        <button id="botonPulsame">Púlsame!!!!</button>
         <div id="mensaje"></div>
     </div>
 
@@ -17,7 +17,7 @@
        // document.addEventListener('DOMContentLoaded', function() {
         //    alert('BIENVENIDO');
             
-            document.getElementById('botonAlerta').addEventListener('click', mostrarAlerta);
+            document.getElementById('botonPulsame').addEventListener('click', mostrarAlerta);
             document.getElementById('botonInofensivo').addEventListener('click', function() {
                 document.getElementById('mensaje').textContent = 'Botón inofensivo clickeado';
             });
