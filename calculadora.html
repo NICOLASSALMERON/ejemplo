@@ -27,7 +27,7 @@
             botonSumar = document.getElementById('buttonSumar');
             botonMultiplicar = document.getElementById('buttonMultiplicar');
             botonDividir = document.getElementById('buttonDividir');
-            resultado = document.getElementById('resultado');
+           // resultado = document.getElementById('resultado');
             
             buttonSumar.addEventListener('click', function() {
                 num1 = Number(numero1.value);
@@ -43,7 +43,7 @@
             buttonDividir.addEventListener('click', function() {
                 num1 = Number(numero1.value);
                 num2 = Number(numero2.value);
-                resultado.textContent = `Resultado: ${num1} × ${num2} = ${num1 / num2}`;
+                resultado.textContent = `Resultado: ${num1} / ${num2} = ${num1 / num2}`;
             });
         });
     </script>
