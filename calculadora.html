@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora Simple</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .contenedor {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        input, button {
+            padding: 8px;
+            font-size: 16px;
+        }
+        button {
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <h2>Calculadora Simple</h2>
+        <input type="number" id="numero1" placeholder="Primer número">
+        <input type="number" id="numero2" placeholder="Segundo número">
+        
+        <div style="display: flex; gap: 10px;">
+            <button id="botonSumar">Sumar</button>
+            <button id="botonMultiplicar">Multiplicar</button>
+        </div>
+        
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        // Esperar a que el DOM esté completamente cargado
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // Obtener referencias a los elementos del DOM
+            const inputNumero1 = document.getElementById('numero1');
+            const inputNumero2 = document.getElementById('numero2');
+            const botonSumar = document.getElementById('botonSumar');
+            const botonMultiplicar = document.getElementById('botonMultiplicar');
+            const resultadoDiv = document.getElementById('resultado');
+            
+            // Función para obtener los valores numéricos de los inputs
+            function obtenerNumeros() {
+                const num1 = parseFloat(inputNumero1.value) || 0; // Si no es número, usa 0
+                const num2 = parseFloat(inputNumero2.value) || 0;
+                return [num1, num2];
+            }
+            
+            // Evento para el botón de suma
+            botonSumar.addEventListener('click', function() {
+                const [num1, num2] = obtenerNumeros();
+                const suma = num1 + num2;
+                resultadoDiv.textContent = `Resultado: ${num1} + ${num2} = ${suma}`;
+            });
+            
+            // Evento para el botón de multiplicación
+            botonMultiplicar.addEventListener('click', function() {
+                const [num1, num2] = obtenerNumeros();
+                const producto = num1 * num2;
+                resultadoDiv.textContent = `Resultado: ${num1} × ${num2} = ${producto}`;
+            });
+        });
+    </script>
+</body>
+</html>
