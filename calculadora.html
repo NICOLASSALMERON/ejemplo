@@ -49,13 +49,16 @@
     <script>
         var numero1, numero2, botonSumar, botonMultiplicar, resultado, num1, num2;
         
+        // Esperamos a que la página termine de cargar
         document.addEventListener('DOMContentLoaded', function() {
-            // Obtener referencias a los elementos
-            numero1 = document.getElementById('entrada1');
-            numero2 = document.getElementById('entrada2');
-            botonSumar = document.getElementById('buttonSumar');
-            botonMultiplicar = document.getElementById('buttonMultiplicar');
-            resultado = document.getElementById('resultado');
+            
+            // Obtenemos los elementos de la página:
+            numero1 = document.getElementById('entrada1'); // Obtenemos el primer número del formulario
+            numero2 = document.getElementById('entrada2'); // Obtenemos el segundo número del formulario
+            
+            botonSumar = document.getElementById('buttonSumar'); // Botón de sumar
+            botonMultiplicar = document.getElementById('buttonMultiplicar'); // Botón de multiplicar
+            resultado = document.getElementById('resultado'); // Donde mostraremos el resultado
             
             // Evento para sumar
             buttonSumar.addEventListener('click', function() {
