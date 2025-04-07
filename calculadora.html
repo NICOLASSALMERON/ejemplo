@@ -59,8 +59,8 @@
             
             // Configuramos qué pasa cuando se hace clic en el botón Sumar
             buttonSumar.addEventListener('click', function() {
-                num1 = Number(numero1.value);
-                num2 = Number(numero2.value);
+                num1 = Number(numero1);
+                num2 = Number(numero2);
                 
                 // Mostramos el texto con la operación y el resultado
                 resultado.textContent = `Resultado: ${numero1.value} + ${numero2.value} = ${numero1.value + numero2.value}`;
