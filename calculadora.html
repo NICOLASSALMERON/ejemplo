@@ -12,7 +12,7 @@
     <input type="text" id="entrada2" placeholder="Segundo número"><br>
     <button id="buttonSumar">Sumar</button>
     <button id="buttonMultiplicar">Multiplicar</button>
-    <button id="buttonDividir">Dividir</button>
+   
         
     <div id="resultado"></div>
   
@@ -25,7 +25,6 @@
             numero2 = document.getElementById('entrada2');
             botonSumar = document.getElementById('buttonSumar');
             botonMultiplicar = document.getElementById('buttonMultiplicar');
-            botonDividir = document.getElementById('buttonDividir');
             resultado = document.getElementById('resultado');
             
             buttonSumar.addEventListener('click', function() {
@@ -39,11 +38,7 @@
                 num2 = Number(numero2.value);
                 resultado.textContent = `Resultado: ${num1} × ${num2} = ${num1 * num2}`;
             });
-            buttonDividir.addEventListener('click', function() {
-                num1 = Number(numero1.value);
-                num2 = Number(numero2.value);
-                resultado.textContent = `Resultado: ${num1} / ${num2} = ${num1 / num2}`;
-            });
+         
         });
     </script>
 </body>
