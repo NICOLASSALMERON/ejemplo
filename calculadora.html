@@ -61,13 +61,17 @@
             buttonSumar.addEventListener('click', function() {
                 num1 = Number(numero1.value);
                 num2 = Number(numero2.value);
+                
+                // Mostramos el texto con la operación y el resultado
                 resultado.textContent = `Resultado: ${numero1.value} + ${numero2.value} = ${numero1.value + numero2.value}`;
             });
 
-            // Evento para multiplicar
+            /// Configuramos qué pasa cuando se hace clic en el botón Multiplicar
             buttonMultiplicar.addEventListener('click', function() {
                 num1 = Number(numero1.value);
                 num2 = Number(numero2.value);
+
+                // Mostramos el texto con la operación y el resultado
                 resultado.textContent = `Resultado: ${numero1} × ${numero2} = ${numero1 * numero2}`;
             });
          
