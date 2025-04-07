@@ -13,9 +13,7 @@
             font-family: "Arial", "Palatino", serif;
             font-size: 30px;
         }
-        body {
-                background-color: lightblue;
-        }
+        
 Hasta aquí el CSS usado en la web dos, de aqui en adelante a la web tres
 
          #demo1 {
@@ -43,6 +41,7 @@ Hasta aquí el CSS usado en la web dos, de aqui en adelante a la web tres
             max-width: 400px;
             margin: 0 auto;
             padding: 20px;
+            background-color: lightblue;
         }
         .contenedor {
             display: flex;
