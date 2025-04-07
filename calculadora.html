@@ -1,9 +1,37 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Esto define que es un documento HTML5 -->
 <html>
 <head>
-    <title>Calculadora Simple</title>
-    <link rel="stylesheet" href="estilo.css">
-  </head>
+    <title>Calculadora Simple</title> <!-- Información para el navegador -->
+    <style>
+        /* Estilos para hacer la calculadora más presentable */
+        body {
+            font-family: Arial, sans-serif;  /* Tipo de letra */
+            max-width: 300px;                /* Ancho máximo */
+            margin: 0 auto;                  /* Centrar en pantalla */
+            padding: 20px;                   /* Espacio interior */
+            text-align: center;              /* Centrar contenido */
+        }
+        input {
+            padding: 8px;                    /* Espacio dentro del cuadro */
+            margin-bottom: 10px;             /* Espacio debajo */
+            width: 200px;                    /* Ancho fijo */
+        }
+        button {
+            padding: 8px 15px;              /* Espacio dentro del botón */
+            margin: 5px;                     /* Espacio alrededor */
+            cursor: pointer;                /* Cambia el cursor al pasar */
+            background-color: #4CAF50;       /* Color verde */
+            color: white;                   /* Texto blanco */
+            border: none;                    /* Sin borde */
+            border-radius: 4px;              /* Esquinas redondeadas */
+        }
+        #resultado {
+            margin-top: 20px;                /* Espacio arriba */
+            padding: 10px;                   /* Espacio interior */
+            border: 1px solid #ddd;         /* Borde gris claro */
+            min-height: 20px;               /* Altura mínima */
+        }
+    </style>
 </head>
 <body>
     
