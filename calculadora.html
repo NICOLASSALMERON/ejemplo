@@ -21,18 +21,21 @@
         var numero1, numero2, botonSumar, botonMultiplicar, resultado, num1, num2;
         
         document.addEventListener('DOMContentLoaded', function() {
+            // Obtener referencias a los elementos
             numero1 = document.getElementById('entrada1');
             numero2 = document.getElementById('entrada2');
             botonSumar = document.getElementById('buttonSumar');
             botonMultiplicar = document.getElementById('buttonMultiplicar');
             resultado = document.getElementById('resultado');
             
+            // Evento para sumar
             buttonSumar.addEventListener('click', function() {
                 num1 = Number(numero1.value);
                 num2 = Number(numero2.value);
                 resultado.textContent = `Resultado: ${num1} + ${num2} = ${num1 + num2}`;
             });
-            
+
+            // Evento para multiplicar
             buttonMultiplicar.addEventListener('click', function() {
                 num1 = Number(numero1.value);
                 num2 = Number(numero2.value);
