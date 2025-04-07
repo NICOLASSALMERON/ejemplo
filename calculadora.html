@@ -11,38 +11,39 @@
         <input type="text" id="entrada1" placeholder="Primer número">
         <input type="text" id="entrada2" placeholder="Segundo número">
        
-        <button id="botonSumar">Sumar</button>
-        <button id="botonMultiplicar">Multiplicar</button>
-        <button id="botonDividir">Dividir</button>
+        <button id="buttonSumar">Sumar</button>
+        <button id="buttonMultiplicar">Multiplicar</button>
+        <button id="buttonDividir">Dividir</button>
                 
         <div id="resultado"></div>
     </div>
 
     <script>
-        var numero1, numero2, botonSumar, botonMultiplicar, resultado, num1, num2;
+        var numero1, numero2, botonSumar, botonMultiplicar, botonDividir, resultado, num1, num2;
         
         document.addEventListener('DOMContentLoaded', function() {
             numero1 = document.getElementById('entrada1');
             numero2 = document.getElementById('entrada2');
-            botonSumar = document.getElementById('botonSumar');
-            botonMultiplicar = document.getElementById('botonMultiplicar');
+            botonSumar = document.getElementById('buttonSumar');
+            botonMultiplicar = document.getElementById('buttonMultiplicar');
+            botonDividir = document.getElementById('buttonDividir');
             resultado = document.getElementById('resultado');
             
-            botonSumar.addEventListener('click', function() {
+            buttonSumar.addEventListener('click', function() {
                 num1 = Number(numero1.value);
                 num2 = Number(numero2.value);
                 resultado.textContent = `Resultado: ${num1} + ${num2} = ${num1 + num2}`;
             });
             
-            botonMultiplicar.addEventListener('click', function() {
+            buttonMultiplicar.addEventListener('click', function() {
                 num1 = Number(numero1.value);
                 num2 = Number(numero2.value);
                 resultado.textContent = `Resultado: ${num1} × ${num2} = ${num1 * num2}`;
             });
-            botonDividir.addEventListener('click', function() {
+            buttonDividir.addEventListener('click', function() {
                 num1 = Number(numero1.value);
                 num2 = Number(numero2.value);
-                resultado.textContent = `Resultado: ${num1} × ${num2} = ${num1 * num2}`;
+                resultado.textContent = `Resultado: ${num1} × ${num2} = ${num1 / num2}`;
             });
         });
     </script>
