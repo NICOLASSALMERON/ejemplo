@@ -57,7 +57,7 @@
             numero2 = document.getElementById('entrada2'); // Obtenemos el segundo número del formulario
             resultado = document.getElementById('resultado'); // Donde mostraremos el resultado
             
-            // Evento para sumar
+            // Configuramos qué pasa cuando se hace clic en el botón Sumar
             buttonSumar.addEventListener('click', function() {
                 num1 = Number(numero1.value);
                 num2 = Number(numero2.value);
@@ -68,7 +68,7 @@
             buttonMultiplicar.addEventListener('click', function() {
                 num1 = Number(numero1.value);
                 num2 = Number(numero2.value);
-                resultado.textContent = `Resultado: ${num1} × ${num2} = ${num1 * num2}`;
+                resultado.textContent = `Resultado: ${numero1} × ${numero2} = ${numero1 * numero2}`;
             });
          
         });
