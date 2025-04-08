@@ -62,16 +62,16 @@
 <body>
     <div class="contenedor">
         <h1>¡Escribe tu nombre!</h1>
-        <input type="text" id="entradaNombre" placeholder="Tu nombre aquí">
-        <br>
+        <input type="text" id="entradaNombre" placeholder="Tu nombre aquí"><br>
         <button id="botonSaludar">Saludar</button>
         <div id="mensaje"></div>
     </div>
 
     <script>
+        var nombre, mensajeDiv;
         document.getElementById('botonSaludar').addEventListener('click', function() {
-            const nombre = document.getElementById('entradaNombre').value.trim();
-            const mensajeDiv = document.getElementById('mensaje');
+            nombre = document.getElementById('entradaNombre').value.trim();
+            mensajeDiv = document.getElementById('mensaje');
 
             if (nombre) {
                 mensajeDiv.textContent = `¡Hola, ${nombre}! ¡Bienvenido a clase! 👋`;
