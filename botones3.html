@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>¡Salúdame!</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .contenedor {
+            background-color: white;
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            width: 200px;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #mensaje {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>¡Escribe tu nombre!</h1>
+        <input type="text" id="entradaNombre" placeholder="Tu nombre aquí">
+        <br>
+        <button id="botonSaludar">Saludar</button>
+        <div id="mensaje"></div>
+    </div>
+
+    <script>
+        document.getElementById('botonSaludar').addEventListener('click', function() {
+            const nombre = document.getElementById('entradaNombre').value.trim();
+            const mensajeDiv = document.getElementById('mensaje');
+
+            if (nombre) {
+                mensajeDiv.textContent = `¡Hola, ${nombre}! ¡Bienvenido a clase! 👋`;
+            } else {
+                mensajeDiv.textContent = 'Por favor, escribe tu nombre 😊';
+            }
+        });
+    </script>
+</body>
+</html>
