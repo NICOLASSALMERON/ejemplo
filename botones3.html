@@ -84,6 +84,7 @@
 
             // Obtenemos el valor del input (lo que el usuario ha escrito)
             nombre = document.getElementById('entradaNombre').value;
+            nombre = Number(nombre);
             nombre = comprobarEsPrimo(nombre);
             // Referencia al elemento donde mostraremos el mensaje
             mensajeDiv = document.getElementById('mensaje');
