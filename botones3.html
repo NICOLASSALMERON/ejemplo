@@ -74,7 +74,6 @@
         <!-- Área donde se mostrará el mensaje -->
         <div id="mensaje"></div>
     </div>
-    <script src="comprobarSiEsPrimo.js"></script>
     <script>
         // Declaramos las variables que usaremos globalmente
         var nombre, mensajeDiv;
@@ -84,8 +83,6 @@
 
             // Obtenemos el valor del input (lo que el usuario ha escrito)
             nombre = document.getElementById('entradaNombre').value;
-            nombre = Number(nombre);
-            nombre = comprobarEsPrimo(nombre);
             // Referencia al elemento donde mostraremos el mensaje
             mensajeDiv = document.getElementById('mensaje');
 
