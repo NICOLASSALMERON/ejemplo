@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>¡Dame un número!</title>
+    <style>
+    <link rel="stylesheet" href="estilo.css">
+    </style>
+</head>
+
+<body>
+    <!-- Contenedor principal -->
+    <div class="contenedor">
+        <h1>Escribe tú número favorito</h1>
+
+        <!-- Campo de entrada para el nombre del usuario -->
+        <input type="text" id="entradaNombre" placeholder="Teclea tú nombre aquí"><br>
+
+        <!-- Botón para generar el saludo -->
+        <button id="botonSaludar">Saludar</button>
+
+        <!-- Área donde se mostrará el mensaje -->
+        <div id="mensaje"></div>
+    </div>
+    <script>
+        // Declaramos las variables que usaremos globalmente
+        var nombre, mensajeDiv;
+
+        // Esperamos a que se haga clic en el botón
+        document.getElementById('botonSaludar').addEventListener('click', function() {
+
+            // Obtenemos el valor del input (lo que el usuario ha escrito)
+            nombre = document.getElementById('entradaNombre').value;
+            // Referencia al elemento donde mostraremos el mensaje
+            mensajeDiv = document.getElementById('mensaje');
+
+            // Si el usuario escribió algo, saludamos
+            if (nombre) {
+                mensajeDiv.textContent = ("¡Hola, " + nombre + "! ¡Bienvenido a clase! 👋");
+            } 
+            // Si el campo está vacío, le pedimos que escriba su nombre
+            else {
+                mensajeDiv.textContent = ("¡Dime tú nombre para saludarte 😊!");
+            }
+        });
+    </script>
+</body>
+</html>
