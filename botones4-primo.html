@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>¡Dame un número!</title>
-    
-    <link rel="stylesheet" href="estilo.css">
-    
+    <title>¡Dame un número!</title>    
+    <link rel="stylesheet" href="estilo.css">    
 </head>
-
 <body>
     <!-- Contenedor principal -->
     <div class="contenedor">
-        <h1>Escribe tú número favorito</h1>
-
+        <h2>Escribe tú número favorito</h2>
         <!-- Campo de entrada para el número favorito del usuario -->
-        <input type="number" id="entradaNombre" placeholder="Teclea tú número favorito"><br>
+        <input type="number" id="entradaFavorito" placeholder="Teclea tú número favorito"><br>
 
         <!-- Botón para generar el saludo -->
         <button id="botonPrimo"> Muestrame todos los primos inferiores</button>
@@ -23,7 +19,7 @@
     </div>
     <script>
         // Declaramos las variables que usaremos globalmente
-        var nombre, mensajeDiv;
+        var numero, mensajeDiv;
 
         // Esperamos a que se haga clic en el botón
         document.getElementById('botonSaludar').addEventListener('click', function() {
