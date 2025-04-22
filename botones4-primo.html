@@ -30,18 +30,14 @@
             // Referencia al elemento donde mostraremos el mensaje
             mensajeDiv = document.getElementById('mensaje');
             
-            for (i = 2; i <= numero ; i= i + 1)
-                {
-                esPrimo = comprobarEsPrimo(i);
-                if (esPrimo == true) {
+            esPrimo = comprobarEsPrimo(i);
+            if (esPrimo == true) {
                           mensajeDiv.textContent = (i + " Es un número primo.");
                         } 
-                    else
+            else
                     {
                           mensajeDiv.textContent = (i + " NO ES un numero primo.");
                         } 
-                    
-                 } 
 
         });
     </script>
