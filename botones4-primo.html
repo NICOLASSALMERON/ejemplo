@@ -12,7 +12,7 @@
         <input type="number" id="entradaFavorito" placeholder="Teclea tú número favorito" value="13"><br>
 
         <!-- Botón para generar el saludo -->
-        <button id="botonPrimo"> Muestrame todos los primos inferiores</button>
+        <button id="botonPrimo"> Muestrame si es primo</button>
 
         <!-- Área donde se mostrará el resultado -->
         <div id="mensaje"></div>
@@ -20,7 +20,7 @@
     <script src="comprobarSiEsPrimo.js"></script>
     <script>
         // Declaramos las variables 
-        var numero, mensajeDiv, esPrimo, i;
+        var numero, mensajeDiv, esPrimo;
 
         // Esperamos a que se haga clic en el botón
         document.getElementById('botonPrimo').addEventListener('click', function() {
@@ -30,13 +30,13 @@
             // Referencia al elemento donde mostraremos el mensaje
             mensajeDiv = document.getElementById('mensaje');
             
-            esPrimo = comprobarEsPrimo(i);
+            esPrimo = comprobarEsPrimo(numero);
             if (esPrimo == true) {
-                          mensajeDiv.textContent = (i + " Es un número primo.");
+                          mensajeDiv.textContent = (numero + " Es un número primo.");
                         } 
             else
                     {
-                          mensajeDiv.textContent = (i + " NO ES un numero primo.");
+                          mensajeDiv.textContent = (numero + " NO ES un numero primo.");
                         } 
 
         });
