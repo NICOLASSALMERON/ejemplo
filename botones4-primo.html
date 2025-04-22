@@ -17,26 +17,32 @@
         <!-- Área donde se mostrará el resultado -->
         <div id="mensaje"></div>
     </div>
+    <script src="comprobarSiEsPrimo.js"></script>
     <script>
-        // Declaramos las variables que usaremos globalmente
-        var numero, mensajeDiv;
+        // Declaramos las variables 
+        var numero, mensajeDiv, esPrimo, i;
 
         // Esperamos a que se haga clic en el botón
-        document.getElementById('botonSaludar').addEventListener('click', function() {
+        document.getElementById('botonPrimo').addEventListener('click', function() {
 
             // Obtenemos el valor del input (lo que el usuario ha escrito)
-            nombre = document.getElementById('entradaNombre').value;
+            numero = document.getElementById('entradaNombre').value;
             // Referencia al elemento donde mostraremos el mensaje
             mensajeDiv = document.getElementById('mensaje');
+            
+            for (i = 2; i <= numero ; i= i + 1)
+                {
+                esPrimo = comprobarEsPrimo(i);
+                if (esPrimo == true) {
+                          document.write (i + " Es un número primo.<br>");
+                        } 
+                    else
+                    {
+                          document.write (i + " NO ES un numero primo.<br>");
+                        } 
+                    
+                 } 
 
-            // Si el usuario escribió algo, saludamos
-            if (nombre) {
-                mensajeDiv.textContent = ("¡Hola, " + nombre + "! ¡Bienvenido a clase! 👋");
-            } 
-            // Si el campo está vacío, le pedimos que escriba su nombre
-            else {
-                mensajeDiv.textContent = ("¡Dime tú nombre para saludarte 😊!");
-            }
         });
     </script>
 </body>
