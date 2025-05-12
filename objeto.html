@@ -1,0 +1,18 @@
+// Crear un objeto "persona"
+const persona = {
+  nombre: "Ana",
+  edad: 25,
+  ciudad: "Madrid",
+  
+  // Método para saludar
+  saludar() {
+    console.log(`Hola, soy ${this.nombre} y tengo ${this.edad} años.`);
+  }
+};
+
+// Acceder a propiedades
+console.log(persona.nombre); // "Ana"
+console.log(persona["ciudad"]); // "Madrid"
+
+// Llamar al método
+persona.saludar(); // "Hola, soy Ana y tengo 25 años."
