@@ -35,35 +35,6 @@
         <div id="resultado-persona" class="resultado"></div>
     </div>
 
-    <!-- Ejemplo 2: Coche -->
-    <div class="ejemplo">
-        <h2>2. Objeto Coche</h2>
-        <button onclick="manejarCoche('encender')">Encender</button>
-        <button onclick="manejarCoche('apagar')">Apagar</button>
-        <div id="resultado-coche" class="resultado"></div>
-    </div>
-
-    <!-- Ejemplo 3: Estudiante -->
-    <div class="ejemplo">
-        <h2>3. Objeto Estudiante</h2>
-        <button onclick="modificarEstudiante()">Matricular en Segundo</button>
-        <div id="resultado-estudiante" class="resultado"></div>
-    </div>
-
-    <!-- Ejemplo 4: Mascotas -->
-    <div class="ejemplo">
-        <h2>4. Clase Mascota</h2>
-        <div id="resultado-mascotas" class="resultado"></div>
-    </div>
-
-    <!-- Ejemplo 5: Libro -->
-    <div class="ejemplo">
-        <h2>5. Objeto Libro</h2>
-        <button onclick="prestarLibro()">Prestar libro</button>
-        <button onclick="devolverLibro()">Devolver libro</button>
-        <div id="resultado-libro" class="resultado"></div>
-    </div>
-
     <script>
         // Ejemplo 1: Persona
         const persona = {
@@ -75,99 +46,6 @@
                 output.innerHTML = `Hola, soy ${this.nombre} y tengo ${this.edad} años.`;
             }
         };
-
-        // Ejemplo 2: Coche
-        const coche = {
-            marca: "Toyota",
-            modelo: "Corolla",
-            año: 2020,
-            encendido: false,
-            encender() {
-                if (!this.encendido) {
-                    this.encendido = true;
-                    return "El coche se ha encendido.";
-                }
-                return "El coche ya está encendido.";
-            },
-            apagar() {
-                if (this.encendido) {
-                    this.encendido = false;
-                    return "El coche se ha apagado.";
-                }
-                return "El coche ya está apagado.";
-            }
-        };
-
-        function manejarCoche(accion) {
-            const output = document.getElementById('resultado-coche');
-            output.innerHTML = coche[accion]();
-        }
-
-        // Ejemplo 3: Estudiante
-        const estudiante = {
-            nombre: "Carlos",
-            curso: "Primero"
-        };
-
-        function modificarEstudiante() {
-            estudiante.edad = 18;
-            estudiante.matricularEnCurso = function(nuevoCurso) {
-                this.curso = nuevoCurso;
-                return `${this.nombre} se ha matriculado en ${this.curso}.`;
-            };
-            
-            const output = document.getElementById('resultado-estudiante');
-            output.innerHTML = estudiante.matricularEnCurso("Segundo");
-        }
-
-        // Ejemplo 4: Mascotas
-        class Mascota {
-            constructor(nombre, tipo) {
-                this.nombre = nombre;
-                this.tipo = tipo;
-            }
-
-            describir() {
-                return `${this.nombre} es un ${this.tipo}.`;
-            }
-        }
-
-        const miPerro = new Mascota("Rex", "perro");
-        const miGato = new Mascota("Luna", "gato");
-        
-        const outputMascotas = document.getElementById('resultado-mascotas');
-        outputMascotas.innerHTML = `
-            ${miPerro.describir()}<br>
-            ${miGato.describir()}
-        `;
-
-        // Ejemplo 5: Libro
-        const libro = {
-            titulo: "El Principito",
-            autor: "Antoine de Saint-Exupéry",
-            disponible: true,
-            prestar() {
-                if (this.disponible) {
-                    this.disponible = false;
-                    return `El libro "${this.titulo}" ha sido prestado.`;
-                }
-                return "El libro no está disponible.";
-            },
-            devolver() {
-                this.disponible = true;
-                return `El libro "${this.titulo}" ha sido devuelto.`;
-            }
-        };
-
-        function prestarLibro() {
-            const output = document.getElementById('resultado-libro');
-            output.innerHTML = libro.prestar();
-        }
-
-        function devolverLibro() {
-            const output = document.getElementById('resultado-libro');
-            output.innerHTML = libro.devolver();
-        }
     </script>
 </body>
 </html>
