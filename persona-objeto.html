@@ -8,8 +8,8 @@
    <div id="resultado-persona">  </div>
 
    <h> MI SEGUNDO OBJETO: COCHE:</h2>
-   <button onclick="coche.arrancar()"> ARRANCAR</button>
-   <button onclick="coche.parar()"> PARAR</button>
+   <button onclick="manejarCoche('encender')">Encender</button>
+    <button onclick="manejarCoche('apagar')">Apagar</button>
    <div id="resultado-coche">  </div>  
     
     <script>
@@ -25,33 +25,32 @@
             output.innerHTML = `HOLA MI NOMBRE ES ${this.nombre} Y TENGO ${this.edad} AÑOS  Y MI SIGNO ES ${this.Signo_Zodiacal} `; 
           }
       };
-      const coche = {
-          marca: "TOYOTA",
-          modelo: "LEON",
-          año: 2020,
-          encendido: false,
-          arrancar () {
-            if ( this.encendido = false)
-                {
-                  this.encendido = true;
-                  return " El coche está encendido";
-                  const output = document.getElementById('resultado-coche');
-                  output.innerHTML = `El coche está  ${this.encendido} `; 
+  const coche = {
+            marca: "Toyota",
+            modelo: "Corolla",
+            año: 2020,
+            encendido: false,
+            encender() {
+                if (!this.encendido) {
+                    this.encendido = true;
+                    return "El coche se ha encendido.";
                 }
-            
-          },
-          parar (){
-            if ( this.encendido = true)
-                {
-                  this.encendido = false;
-                  return " El coche está parado";
-                  const output = document.getElementById('resultado-coche');
-                  output.innerHTML = `El coche está  ${this.encendido} `; 
+                return "El coche ya está encendido.";
+            },
+            apagar() {
+                if (this.encendido) {
+                    this.encendido = false;
+                    return "El coche se ha apagado.";
                 }
-            
-          }
-      };
-      
+                return "El coche ya está apagado.";
+            }
+        };
+
+        function manejarCoche(accion) {
+            const output = document.getElementById('resultado-coche');
+            output.innerHTML = coche[accion]();
+        }
+
     </script>
   </body>
 </html>
