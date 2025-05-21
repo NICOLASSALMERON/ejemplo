@@ -35,6 +35,8 @@
                 {
                   this.encendido = true;
                   return " El coche está encendido";
+                  const output = document.getElementById('resultado-coche');
+                  output.innerHTML = `El coche está  ${this.encendido} `; 
                 }
             
           },
