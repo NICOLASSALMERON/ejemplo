@@ -52,68 +52,86 @@
         <div id="resultado-coche" class="resultado"></div>
     </div>
     
-<script>
-    // ========== EJEMPLO 1: OBJETO PERSONA ==========
-    const persona = {
-        nombre: "Ana",
-        edad: 25,
-        ciudad: "Madrid",
-        
-        /**
-         * Muestra un saludo con los datos del usuario en el elemento HTML correspondiente
-         * @method saludar
-         * @returns {void} Actualiza directamente el contenido del DOM
-         */
-        saludar() {
-            const output = document.getElementById('resultado-persona');
-            output.innerHTML = `Hola, soy ${this.nombre} y tengo ${this.edad} años.`;
-        }
-    };
+<body>
+    <h1>Ejemplos de Objetos en JavaScript</h1>
 
-    // ========== EJEMPLO 2: OBJETO COCHE ==========
-    const coche = {
-        marca: "Toyota",
-        modelo: "Corolla",
-        año: 2020,
-        encendido: false,  // Estado interno (true: encendido, false: apagado)
-        
-        /**
-         * Enciende el coche si no está ya encendido
-         * @method encender
-         * @returns {string} Mensaje indicando el resultado de la operación
-         */
-        encender() {
-            if (!this.encendido) {
-                this.encendido = true;
-                return "El coche se ha encendido.";
-            }
-            return "El coche ya está encendido.";
-        },
-        
-        /**
-         * Apaga el coche si no está ya apagado
-         * @method apagar
-         * @returns {string} Mensaje indicando el resultado de la operación
-         */
-        apagar() {
-            if (this.encendido) {
-                this.encendido = false;
-                return "El coche se ha apagado.";
-            }
-            return "El coche ya está apagado.";
-        }
-    };
+    <!-- Ejemplo 1: Persona -->
+    <div class="ejemplo">
+        <h2>1. Objeto Persona</h2>
+        <button onclick="persona.saludar()">Saludar</button>
+        <div id="resultado-persona" class="resultado"></div>
+    </div>
 
-    /**
-     * Función puente para ejecutar acciones del coche
-     * @function manejarCoche
-     * @param {string} accion - Nombre de la acción a ejecutar ('encender' o 'apagar')
-     * @returns {void} Actualiza el DOM con el resultado
-     */
-    function manejarCoche(accion) {
-        const output = document.getElementById('resultado-coche');
-        output.innerHTML = coche[accion](); // Ejecuta método dinámicamente
-    }
-  <script>
-  </body>
+    <!-- Ejemplo 2: Coche -->
+    <div class="ejemplo">
+        <h2>2. Objeto Coche</h2>
+        <button onclick="manejarCoche('encender')">Encender</button>
+        <button onclick="manejarCoche('apagar')">Apagar</button>
+        <div id="resultado-coche" class="resultado"></div>
+    </div>
+
+    <script>
+        // ========== EJEMPLO 1: OBJETO PERSONA ==========
+        const persona = {
+            nombre: "Ana",
+            edad: 25,
+            ciudad: "Madrid",
+            
+            /**
+             * Muestra un saludo con los datos del usuario en el elemento HTML correspondiente
+             * @method saludar
+             * @returns {void} Actualiza directamente el contenido del DOM
+             */
+            saludar() {
+                const output = document.getElementById('resultado-persona');
+                output.innerHTML = `Hola, soy ${this.nombre} y tengo ${this.edad} años.`;
+            }
+        };
+
+        // ========== EJEMPLO 2: OBJETO COCHE ==========
+        const coche = {
+            marca: "Toyota",
+            modelo: "Corolla",
+            año: 2020,
+            encendido: false,
+            
+            /**
+             * Enciende el coche si no está ya encendido
+             * @method encender
+             * @returns {string} Mensaje indicando el resultado de la operación
+             */
+            encender() {
+                if (!this.encendido) {
+                    this.encendido = true;
+                    return "El coche se ha encendido.";
+                }
+                return "El coche ya está encendido.";
+            },
+            
+            /**
+             * Apaga el coche si no está ya apagado
+             * @method apagar
+             * @returns {string} Mensaje indicando el resultado de la operación
+             */
+            apagar() {
+                if (this.encendido) {
+                    this.encendido = false;
+                    return "El coche se ha apagado.";
+                }
+                return "El coche ya está apagado.";
+            }
+        };
+
+        /**
+         * Función puente para ejecutar acciones del coche
+         * @function manejarCoche
+         * @param {string} accion - Nombre de la acción a ejecutar ('encender' o 'apagar')
+         * @returns {void} Actualiza el DOM con el resultado
+         */
+        function manejarCoche(accion) {
+            const output = document.getElementById('resultado-coche');
+            output.innerHTML = coche[accion]();
+        }
+    </script>
+</body>
 </html>
