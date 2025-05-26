@@ -1,16 +1,56 @@
 <html>
   <head>
     <title> PAGINA con ejemplos de objetos en JAVASCRIPT</title>
+
+        <!-- Estilos CSS para la presentación -->
+    <style>
+        /* Contenedor para cada ejemplo */
+        .ejemplo {
+            border: 1px solid #ccc;  /* Borde gris */
+            padding: 20px;           /* Espaciado interno */
+            margin: 20px;            /* Margen exterior */
+            border-radius: 10px;     /* Esquinas redondeadas */
+        }
+        
+        /* Estilo para los botones */
+        button {
+            background-color: #4CAF50; /* Color verde */
+            color: white;            /* Texto blanco */
+            padding: 10px;           /* Espaciado interno */
+            border: none;            /* Sin borde */
+            cursor: pointer;         /* Cursor tipo puntero */
+            margin: 5px;             /* Margen entre botones */
+        }
+        
+        /* Área de resultados */
+        .resultado {
+            background-color: #f0f0f0; /* Fondo gris claro */
+            padding: 10px;           /* Espaciado interno */
+            margin: 10px 0;          /* Margen superior e inferior */
+        }
+    </style>
   </head>
   <body>
-   <h2> MI PRIMER OBJETO:</h2>
-   <button onclick="persona.saludar()"> SALUDAR</button>
-   <div id="resultado-persona">  </div>
+    <!-- Título principal -->
+    <h1>Ejemplos de Objetos en JavaScript</h1>
 
-   <h> MI SEGUNDO OBJETO: COCHE:</h2>
-   <button onclick="manejarCoche('encender')">Encender</button>
-    <button onclick="manejarCoche('apagar')">Apagar</button>
-   <div id="resultado-coche">  </div>  
+    <!-- Ejemplo 1: Objeto Persona -->
+    <div class="ejemplo">
+        <h2>1. Objeto Persona</h2>
+        <!-- Botón que ejecuta el método saludar -->
+        <button onclick="persona.saludar()">Saludar</button>
+        <!-- Div donde se mostrará el resultado -->
+        <div id="resultado-persona" class="resultado"></div>
+    </div>
+
+    <!-- Ejemplo 2: Objeto Coche -->
+    <div class="ejemplo">
+        <h2>2. Objeto Coche</h2>
+        <!-- Botones que llaman a la función manejarCoche con diferentes parámetros -->
+        <button onclick="manejarCoche('encender')">Encender</button>
+        <button onclick="manejarCoche('apagar')">Apagar</button>
+        <div id="resultado-coche" class="resultado"></div>
+    </div>
     
     <script>
       // EJEMPLO DE UN OBJETO TIPO PERSONA
