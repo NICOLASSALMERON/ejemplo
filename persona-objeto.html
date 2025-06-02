@@ -51,7 +51,15 @@
         <button onclick="manejarCoche('apagar')">Apagar</button>
         <div id="resultado-coche" class="resultado"></div>
     </div>
-    
+   <h1>Ejemplo de Objeto Estudiante</h1>
+
+    <!-- Ejemplo 3: Estudiante -->
+    <div class="ejemplo">
+        <h2>3. Objeto Estudiante</h2>
+        <p>Estudiante actual: <span id="estudiante-actual">${estudiante.nombre} - ${estudiante.curso}</span></p>
+        <button onclick="modificarEstudiante()">Matricular en Segundo</button>
+        <div id="resultado-estudiante" class="resultado"></div>
+    </div>
 
     <script>
         // ========== EJEMPLO 1: OBJETO PERSONA ==========
@@ -115,6 +123,48 @@
             const output = document.getElementById('resultado-coche');
             output.innerHTML = coche[accion]();
         }
+
+    
+        // ========== EJEMPLO 3: OBJETO ESTUDIANTE ==========
+        const estudiante = {
+            nombre: "Carlos",
+            curso: "Primero"
+        };
+
+        /**
+         * Modifica las propiedades del estudiante y añade nuevo método
+         * @function modificarEstudiante
+         * @returns {void} Actualiza el DOM con el resultado de la matriculación
+         */
+        function modificarEstudiante() {
+            // Añade propiedad edad al objeto existente
+            estudiante.edad = 18;
+            
+            /**
+             * Método añadido dinámicamente para cambiar el curso
+             * @method matricularEnCurso
+             * @param {string} nuevoCurso - Nombre del nuevo curso
+             * @returns {string} Mensaje de confirmación
+             */
+            estudiante.matricularEnCurso = function(nuevoCurso) {
+                this.curso = nuevoCurso;
+                // Actualiza también el display del estado actual
+                document.getElementById('estudiante-actual').textContent = 
+                    `${this.nombre} - ${this.curso}`;
+                return `${this.nombre} se ha matriculado en ${this.curso}.`;
+            };
+            
+            const output = document.getElementById('resultado-estudiante');
+            output.innerHTML = estudiante.matricularEnCurso("Segundo");
+        }
+
+        // Mostrar estado inicial al cargar la página
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('estudiante-actual').textContent = 
+                `${estudiante.nombre} - ${estudiante.curso}`;
+        });
+     
+
     </script>
 </body>
 </html>
