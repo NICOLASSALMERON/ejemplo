@@ -1,0 +1,120 @@
+<html>
+  <head>
+    <title> PAGINA con ejemplos de objetos en JAVASCRIPT</title>
+
+        <!-- Estilos CSS para la presentación -->
+    <style>
+        /* Contenedor para cada ejemplo */
+        .ejemplo {
+            border: 1px solid #ccc;  /* Borde gris */
+            padding: 20px;           /* Espaciado interno */
+            margin: 20px;            /* Margen exterior */
+            border-radius: 10px;     /* Esquinas redondeadas */
+        }
+        
+        /* Estilo para los botones */
+        button {
+            background-color: #4CAF50; /* Color verde */
+            color: white;            /* Texto blanco */
+            padding: 10px;           /* Espaciado interno */
+            border: none;            /* Sin borde */
+            cursor: pointer;         /* Cursor tipo puntero */
+            margin: 5px;             /* Margen entre botones */
+        }
+        
+        /* Área de resultados */
+        .resultado {
+            background-color: #f0f0f0; /* Fondo gris claro */
+            padding: 10px;           /* Espaciado interno */
+            margin: 10px 0;          /* Margen superior e inferior */
+        }
+    </style>
+  </head>
+  <body>
+    <!-- Título principal -->
+    <h1>Ejemplos de Objetos en JavaScript</h1>
+
+    <!-- Ejemplo 1: Objeto Persona -->
+    <div class="ejemplo">
+        <h2>1. Objeto Persona</h2>
+        <!-- Botón que ejecuta el método saludar -->
+        <button onclick="persona.saludar()">Saludar</button>
+        <!-- Div donde se mostrará el resultado -->
+        <div id="resultado-persona" class="resultado"></div>
+    </div>
+
+    <!-- Ejemplo 2: Objeto Coche -->
+    <div class="ejemplo">
+        <h2>2. Objeto Coche</h2>
+        <!-- Botones que llaman a la función manejarCoche con diferentes parámetros -->
+        <button onclick="manejarCoche('encender')">Encender</button>
+        <button onclick="manejarCoche('apagar')">Apagar</button>
+        <div id="resultado-coche" class="resultado"></div>
+    </div>
+    
+
+    <script>
+        // ========== EJEMPLO 1: OBJETO PERSONA ==========
+        const persona = {
+            nombre: "Ana",
+            edad: 25,
+            ciudad: "Madrid",
+            
+            /**
+             * Muestra un saludo con los datos del usuario en el elemento HTML correspondiente
+             * @method saludar
+             * @returns {void} Actualiza directamente el contenido del DOM
+             */
+            saludar() {
+                const output = document.getElementById('resultado-persona');
+                output.innerHTML = `Hola, soy ${this.nombre} y tengo ${this.edad} años.`;
+            }
+        };
+
+        // ========== EJEMPLO 2: OBJETO COCHE ==========
+        const coche = {
+            marca: "Toyota",
+            modelo: "Corolla",
+            año: 2020,
+            encendido: false,
+            
+            /**
+             * Enciende el coche si no está ya encendido
+             * @method encender
+             * @returns {string} Mensaje indicando el resultado de la operación
+             */
+            encender() {
+                if (!this.encendido) {
+                    this.encendido = true;
+                    return "El coche se ha encendido.";
+                }
+                return "El coche ya está encendido.";
+            },
+            
+            /**
+             * Apaga el coche si no está ya apagado
+             * @method apagar
+             * @returns {string} Mensaje indicando el resultado de la operación
+             */
+            apagar() {
+                if (this.encendido) {
+                    this.encendido = false;
+                    return "El coche se ha apagado.";
+                }
+                return "El coche ya está apagado.";
+            }
+        };
+
+        /**
+         * Función puente para ejecutar acciones del coche
+         * @function manejarCoche
+         * @param {string} accion - Nombre de la acción a ejecutar ('encender' o 'apagar')
+         * @returns {void} Actualiza el DOM con el resultado
+         */
+        function manejarCoche(accion) {
+            const output = document.getElementById('resultado-coche');
+            output.innerHTML = coche[accion]();
+        }
+    </script>
+</body>
+</html>
