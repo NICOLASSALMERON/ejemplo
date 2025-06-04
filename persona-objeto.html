@@ -51,7 +51,14 @@
         <button onclick="manejarCoche('apagar')">Apagar</button>
         <div id="resultado-coche" class="resultado"></div>
     </div>
-    
+
+    <!-- Ejemplo 3: Objeto ESTUDIANTE -->
+    <div class="ejemplo">
+        <h2>1. Objeto ESTUDIANTE</h2>
+        <button onclick="modificarEstudiante()"> MATRICULAR</button>
+        <!-- Div donde se mostrará el resultado -->
+        <div id="resultado-estudiante" class="resultado"></div>
+    </div>
 
     <script>
         // ========== EJEMPLO 1: OBJETO PERSONA ==========
@@ -115,6 +122,20 @@
             const output = document.getElementById('resultado-coche');
             output.innerHTML = coche[accion]();
         }
+
+     // ========== EJEMPLO 3: OBJETO ESTUDIANTE ==========  
+     const estudiante = {
+            nombre: "CARLOS",
+            curso: "Primero",
+     };
+
+     function modificarEstudiante () {
+            estudiante.edad = 18;
+
+     }
+
+      
     </script>
+    
 </body>
 </html>
