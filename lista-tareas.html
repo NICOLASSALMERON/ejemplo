@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Tareas</title>
+  <style>
+    /* Estilos básicos para el cuerpo del documento */
+    body {
+      font-family: Arial, sans-serif; /* Tipo de letra */
+      text-align: center;             /* Centra el contenido */
+      margin-top: 50px;               /* Espacio superior */
+    }
+
+    /* Estilo para el campo de texto */
+    input {
+      padding: 10px;     /* Espaciado interno */
+      width: 200px;      /* Ancho del campo */
+    }
+
+    /* Estilo para el botón */
+    button {
+      padding: 10px;     /* Espaciado interno */
+    }
+
+    /* Estilo para el contenedor de las tareas */
+    #listaTareas {
+      margin-top: 20px;  /* Espacio por encima de la lista */
+    }
+  </style>
+</head>
+<body>
+<!-- Título principal de la página -->
+<h1>Lista de Tareas</h1>
+
+<!-- Campo de texto donde el usuario escribe la nueva tarea -->
+<input id="nuevaTarea" type="text">
+
+<!-- Botón que al hacer clic llama a la función agregarTarea -->
+<button onclick="agregarTarea()">Agregar tarea</button>
+
+<!-- Contenedor donde se mostrarán las tareas añadidas -->
+<div id="listaTareas"></div>
+
+<script>
+  // Declaramos un array vacío para guardar las tareas
+  var tareas = [];
+
+  // Función que se ejecuta al hacer clic en el botón
+  function agregarTarea() {
+    // Obtenemos el elemento input por su ID
+    var input = document.getElementById("nuevaTarea");
+
+    // Guardamos el texto que el usuario escribió en el input
+    var texto = input.value;
+
+    // Añadimos el texto al array de tareas
+    tareas.push(texto);
+
+    // Mostramos nuevamente todas las tareas en pantalla
+    mostrarTareas();
+  }
+
+  // Función que muestra todas las tareas en el div
+  function mostrarTareas() {
+    // Obtenemos el div donde se mostrarán las tareas
+    var lista = document.getElementById("listaTareas");
+
+    // Inicializamos una variable para construir el HTML de la lista
+    var contenidoHTML = "";
+
+    // Recorremos el array de tareas
+    for (var i = 0; i < tareas.length; i++) {
+      // Añadimos cada tarea como un párrafo al contenido acumulado
+      contenidoHTML = contenidoHTML + "<p>" + tareas[i] + "</p>";
+    }
+
+    // Asignamos todo el contenido generado al div de una sola vez
+    lista.innerHTML = contenidoHTML;
+  }
+</script></body>
+</html>
